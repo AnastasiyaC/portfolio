@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+//font
+$font: 'Montserrat', sans-serif;
+$mainColor: rgb(159, 159, 159);
+$fontDescriptionColor: rgb(138, 138, 138);
+
+$backgroundColor: rgb(42, 42, 42);
+$wrapper: 840px;
+
+//social links
+$commonColor: rgba(255, 255, 255, 0.7);
+$facebookColor: rgb(59, 89, 153);
+$instagramColor: rgb(255, 48, 108);
+$linkedinColor: rgb(0, 123, 173);
+$githubColor: rgb(51, 51, 51);
+
+@mixin image-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@mixin project-button {
+  color: $mainColor;
+  display: inline-block;
+  background-color: rgb(49, 49, 49);
+  text-transform: uppercase;
+  font: {
+    size: 13px;
+    family: $font;
+    weight: 700;
+  }
+  border-radius: 3px;
+  border: 1px solid rgb(34, 34, 34);
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+@mixin position-absolut($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin height-width($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin link {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}

@@ -1,0 +1,86 @@
+@import "../../../styles/variables";
+
+@mixin line-arrows {
+  height: 5px;
+  width: 80%;
+  background-color: rgb(138, 138, 138);
+  content: '';
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@mixin line-arrows-hover {
+  width: 50%;
+  background-color: rgb(194, 194, 194);
+}
+
+.Arrow {
+  @include center;
+  @include link;
+  background-color: transparent;
+  @include height-width(60px, 60px);
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  &:hover {
+    & .Arrow-Line:before {
+      width: 50%;
+      @include line-arrows-hover;
+    }
+    & .Arrow-Line:after {
+      @include line-arrows-hover;
+    }
+  }
+  &-Line {
+    @include height-width(5px, 100%);
+    background-color: transparent;
+    position: relative;
+    border-radius: 3px;
+    @include center;
+    &:before {
+      @include line-arrows;
+      transform: rotate(45deg);
+      transform-origin: 95% 25%;
+    }
+    &:after {
+      @include line-arrows;
+      transform: rotate(-45deg);
+      transform-origin: 95% 65%;
+    }
+  }
+  &-Text {
+    font-family: $font;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $fontDescriptionColor;
+    transition: all 0.3s linear;
+  }
+}
+
+.Arrow_direction_left {
+  left: 30px;
+  transform: translateY(-50%) rotate(180deg);
+  .Arrow-Text {
+    transform: rotate(180deg) scale(1, 0);
+  }
+  &:hover {
+    .Arrow-Text {
+      transform: rotate(180deg) scale(1, 1) translateX(20px);
+    }
+  }
+}
+
+.Arrow_direction_right {
+  right: 30px;
+  .Arrow-Text {
+    transform: scale(1, 0);
+  }
+  &:hover {
+    .Arrow-Text {
+      transform: scale(1, 1) translateX(-20px);
+    }
+  }
+}

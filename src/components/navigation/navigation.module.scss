@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.Nav {
+    @include center;
+    @include position-absolut(0, 0);
+    height: 100vh;
+    width: 100vw;
+    background-color: $backgroundColor;
+    transform: translateY(-100vh);
+    transition: all 0.3s ease-out;
+    &-List {
+        width: 40%;
+        margin-left: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.Nav_open {
+    transform: translateY(0);
+}
+

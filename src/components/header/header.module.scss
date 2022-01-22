@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.Header {
+    @include height-width(0, 100vw);
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    &-Title {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+    }
+}
+

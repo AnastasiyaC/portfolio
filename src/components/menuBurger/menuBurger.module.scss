@@ -1,0 +1,44 @@
+@import "../../styles/variables";
+
+.Menu {
+    @include height-width(40px, 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 20;
+    &:hover {
+        transform: scale(1, 1.1);
+    }
+    &-Line {
+        @include height-width(4px, 100%);
+        background-color: rgb(138, 138, 138);
+        transition: all 0.3s linear;
+    }
+    &-Line_position_center {
+        transform: scale(1, 1);
+    }
+}
+
+.Menu_opened {
+    &:hover {
+        transform: scale(1.1, 1.1);
+    }
+    .Menu-Line_position_top {
+        transform: translateY(18px) rotate(45deg);
+        transform-origin: center;
+    }
+    .Menu-Line_position_center{
+        transform: scale(0, 0);
+    }
+    .Menu-Line_position_bottom {
+        transform: translateY(-16px) rotate(-45deg);
+        transform-origin: center;
+    }
+}

@@ -1,0 +1,144 @@
+@import "../../../../styles/variables";
+
+@mixin hover-color($color) {
+    background-color: $color;
+    color: #ffffff;
+}
+
+@mixin keyframe-start($color) {
+    background-color: $color;
+    transform: scale(1.1, 1.1);
+}
+
+@mixin keyframe-finish {
+    background-color: $commonColor;
+    transform: scale(1, 1);
+}
+
+.SocialLink {
+    & + & {
+        margin-left: 40px;
+    }
+    &-Network {
+        @include height-width(65px, 65px);
+        @include center;
+        flex-direction: column;
+        position: relative;
+        background-color: $commonColor;
+        border-radius: 50%;
+        padding: 12px;
+        margin: 10px;
+        font-size: 18px;
+        box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &:hover .SocialLink-Tooltip {
+            top: -45px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+        }
+    }
+    &-Tooltip {
+        position: absolute;
+        top: 0;
+        font-size: 14px;
+        background-color: rgba(255, 255, 255, 0.4);
+        color: #ffffff;
+        padding: 7px 10px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &::before {
+            position: absolute;
+            content: "";
+            @include height-width(8px, 8px);
+            background-color: rgba(255, 255, 255, 0.4);
+            bottom: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    }
+    &-IconContainer {
+        @include height-width(30px, 30px);
+    }
+    &-Icon {
+        @include image-cover;
+    }
+}
+
+.SocialLink-Network_facebook {
+    animation: 0.5s linear 0.3s facebook;
+    &:hover,
+    &:hover .SocialLink-Tooltip,
+    &:hover .SocialLink-Tooltip::before{
+        @include hover-color($facebookColor);
+    }
+}
+
+.SocialLink-Network_instagram {
+    animation: 0.5s linear 0.5s instagram;
+    &:hover,
+    &:hover .SocialLink-Tooltip,
+    &:hover .SocialLink-Tooltip::before{
+        @include hover-color($instagramColor);
+    }
+}
+
+.SocialLink-Network_linkedin {
+    animation: 0.5s linear 0.7s linkedin;
+    &:hover,
+    &:hover .SocialLink-Tooltip,
+    &:hover .SocialLink-Tooltip::before{
+        @include hover-color($linkedinColor);
+    }
+}
+
+.SocialLink-Network_github {
+    animation: 0.5s linear 0.9s github;
+    &:hover,
+    &:hover .SocialLink-Tooltip,
+    &:hover .SocialLink-Tooltip::before{
+        @include hover-color($githubColor);
+    }
+}
+
+@keyframes facebook {
+    70% {
+        @include keyframe-start($facebookColor);
+    }
+    100% {
+        @include keyframe-finish;
+    }
+}
+
+@keyframes instagram {
+    70% {
+        @include keyframe-start($instagramColor);
+    }
+    100% {
+        @include keyframe-finish;
+    }
+}
+
+@keyframes linkedin {
+    70% {
+        @include keyframe-start($linkedinColor);
+    }
+    100% {
+        @include keyframe-finish;
+    }
+}
+
+@keyframes github {
+    70% {
+        @include keyframe-start($githubColor);
+    }
+    100% {
+        @include keyframe-finish;
+    }
+}

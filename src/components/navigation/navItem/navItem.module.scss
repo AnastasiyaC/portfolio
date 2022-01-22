@@ -1,0 +1,49 @@
+@import "../../../styles/variables";
+
+.NavItem {
+    list-style-type: none;
+    width: 100%;
+    @include center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.25);
+    & + & {
+        margin-top: 10px;
+    }
+    &-Link {
+        @include link;
+        display: inline-block;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font: {
+            family: $font;
+            weight: 600;
+            size: 32px;
+        };
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: rgb(90, 90, 90);
+        position: relative;
+        overflow: hidden;
+        &:before {
+            @include  height-width(100%, 100%);
+            content: '';
+            @include position-absolut(0, -100%);
+            background-color: rgba(118, 118, 118, 0.1);
+            transition: all 0.3s linear;
+            z-index: 1;
+        }
+        &:hover {
+            font-weight: 700;
+            color: rgb(166, 166, 166);
+        }
+        &:hover:before{
+            left: 0;
+        }
+    }
+}
+
+.NavItem-Link_active {
+    font-weight: 700;
+    color: rgb(213, 213, 213);
+}

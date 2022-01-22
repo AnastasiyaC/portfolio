@@ -1,0 +1,124 @@
+@import "../../../styles/variables";
+
+@mixin loader-outter-inner {
+    border: 6px solid #f50057;
+    border-radius: 50%;
+}
+
+@mixin text ($size, $weight) {
+    font: {
+        size: $size;
+        weight: $weight;
+    }
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.AboutPage {
+    @include center;
+    flex-direction: column;
+    @include height-width(100vh, 100vw);
+    background-color: $backgroundColor;
+    color: $mainColor;
+    font-family: $font;
+    overflow: hidden;
+    &-PortfolioPhoto {
+        @include height-width(240px, 240px);
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        .Loader {
+            position: absolute;
+            @include height-width(240px, 240px);
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            &-Outter {
+                @include loader-outter-inner;
+                @include height-width(100%, 100%);
+                border-left-color: transparent;
+                border-bottom: 0;
+                position: absolute;
+                animation: loader-outter 2s cubic-bezier(.42, .61, .58, .41) forwards;
+            }
+            &-Inner {
+                @include loader-outter-inner;
+                @include height-width(calc(100% - 20px), calc(100% - 20px));
+                @include position-absolut(50%, 50%);
+                transform: translate(-50%, -50%);
+                border-right: 0;
+                border-top-color: transparent;
+                animation: loader-inner 2s cubic-bezier(.42, .61, .58, .41) forwards;
+            }
+        }
+    }
+    &-PhotoContainer {
+        @include height-width(200px, 200px);
+        border-radius: 50%;
+        overflow: hidden;
+        @include position-absolut(50%, 50%);
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.6), -1px -1px 2px 0 rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        animation: 0.5s linear 1.7s forwards image;
+    }
+    &-Photo {
+        @include image-cover;
+    }
+    &-PortfolioInfo {
+        width: 560px;
+        background-color: transparent;
+        @include center;
+        flex-direction: column;
+        text-align: center;
+    }
+    &-Title {
+        @include text(30px, 700);
+        margin: 0;
+        animation: 0.3s linear 2.2s forwards info;
+    }
+    &-TitleRepresentation {
+        @include text(22px, 700);
+        margin: 20px 0 0;
+        animation: 0.3s linear 3s forwards info;
+    }
+    &-Description {
+        @include text(18px, 400);
+        margin: 10px 0 0;
+        animation: 0.3s linear 3s forwards info;
+    }
+}
+
+@keyframes loader-outter {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(720deg);
+    }
+}
+
+@keyframes image {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes info {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

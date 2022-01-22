@@ -1,0 +1,42 @@
+@import "../../../styles/variables";
+
+.InputRadio {
+    position: absolute;
+    left: -9999px;
+    &-Label {
+        @include project-button;
+        padding: 8px 10px;
+        position: relative;
+        margin: 10px 10px 0 0;
+        &:before {
+            @include height-width(100%, 100%);
+            content: '';
+            @include position-absolut(0, 0);
+            background-color: rgba(73, 73, 73, 0.5);
+            transition: all 0.3s linear;
+            transform: scale(0, 0);
+        }
+        &:hover:before{
+            transform: scale(1, 1);
+        }
+        &:hover {
+            .label__text {
+                color: rgb(246, 246, 246);
+            }
+        }
+    }
+    &-Text {
+        transition: all 0.3s linear;
+    }
+}
+
+.InputRadio-Label_active {
+    background-color: rgb(76, 59, 59);
+    .InputRadio-Text {
+        color: rgb(185, 185, 185);
+    }
+}
+
+
+
+
