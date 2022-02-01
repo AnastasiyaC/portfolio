@@ -13,7 +13,7 @@ function MenuBurger() {
 
     return (
         <button
-            className={ `${classes.Menu} ${isMenuOpened ? `${classes['Menu_open']}` : ''}` }
+            className={ `${classes.Menu} ${isMenuOpened ? `${classes['Menu_opened']}` : ''}` }
             onClick={ onMenuClicked }
         >
             <div className={ `${classes['Menu-Line']} ${classes['Menu-Line_position_top']}` }/>

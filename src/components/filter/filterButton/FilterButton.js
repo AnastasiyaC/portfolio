@@ -1,15 +1,8 @@
 import React from "react";
 import classes from "./filterButton.module.scss";
-import { useDispatch } from "react-redux";
-import { toggleFilter } from "../../../redux/actions";
 
 function FilterButton(props) {
-    const { name, id, checked } = props;
-    const dispatch = useDispatch();
-
-    const onFilterClicked = () => {
-        dispatch(toggleFilter(id, name));
-    }
+    const { name, id, checked, onFilterClicked } = props;
 
     return (
         <>

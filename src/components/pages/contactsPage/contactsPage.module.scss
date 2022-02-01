@@ -1,4 +1,5 @@
-@import "../../../styles/variables";
+@import "src/styles/variables";
+@import "src/styles/mediaMixin";
 
 .ContactsPage {
     @include height-width(100vh, 100vw);
@@ -13,15 +14,27 @@
             size: 18px;
             weight: 600;
         }
+        @include _480 {
+            font-size: 16px;
+        }
     }
     .SocialNetwork {
         margin-top: 80px;
         color: $fontDescriptionColor;
+        @include _920 {
+            margin-top: 40px;
+        }
+        @include _480 {
+            margin-top: 20px;
+        }
         &-Title {
             margin: 0;
             font: {
                 size: 32px;
                 weight: 700;
+            }
+            @include _480 {
+                font-size: 24px;
             }
         }
         &-Description {
@@ -29,6 +42,10 @@
             font: {
                 size: 18px;
                 weight: 400;
+            }
+            @include _768 {
+                margin: 20px 0 0;
+                font-size: 16px;
             }
         }
         &-Links {

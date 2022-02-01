@@ -1,8 +1,12 @@
-@import "../../styles/variables";
+@import "src/styles/variables";
+@import "src/styles/mediaMixin";
 
 .Filter {
     width: 100%;
     margin: 30px 0 0;
+    @include _768 {
+        margin: 20px 0 0;
+    }
     &-Buttons {
         width: 100%;
         display: flex;

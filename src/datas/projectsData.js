@@ -21,7 +21,9 @@ const projectsData = [
             demo: 'https://anastasiyac.github.io/calculator/',
             git: 'https://github.com/AnastasiyaC/calculator',
             screenshot: calculator,
-            description: 'The simplest calculator that performs mathematical operations: addition, subtraction, multiplication and division. Calculator contain a keyboard with buttons for digits and arithmetical operations and a display as an output of the result of a mathematical expression.',
+            description: 'The simplest calculator that performs mathematical operations: addition, subtraction, ' +
+                'multiplication and division. Calculator contain a keyboard with buttons for digits and arithmetical ' +
+                'operations and a display as an output of the result of a mathematical expression.',
             skills: ['Show all', 'HTML', 'CSS', 'JavaScript', 'BEM',],
             id: 1,
         },
@@ -48,7 +50,8 @@ const projectsData = [
             demo: 'https://anastasiyac.github.io/video-player/',
             git: 'https://github.com/AnastasiyaC/video-player',
             screenshot: videoPlayer,
-            description: 'The video player allows you to play and pause a video, fastforward and runback, mute and change volume and open it full screen.',
+            description: 'The video player allows you to play and pause a video, fastforward and runback, mute and change volume ' +
+                'and open it full screen.',
             skills: ['Show all', 'HTML', 'CSS', 'JavaScript', 'Editor', 'BEM',],
             id: 4,
         },
@@ -57,7 +60,9 @@ const projectsData = [
             demo: 'https://anastasiyac.github.io/dynamic-landing-page/',
             git: 'https://github.com/AnastasiyaC/dynamic-landing-page',
             screenshot: dynamicLandingPage,
-            description: 'The dynamic landing page shows the current date and time, input field for user\'s name and daily task. The background image changes depending on the day time. The app uses local storage to store the user\'s name and daily task.',
+            description: 'The dynamic landing page shows the current date and time, input field for user\'s name ' +
+                'and daily task. The background image changes depending on the day time. The app uses local storage to ' +
+                'store the user\'s name and daily task.',
             skills: ['Show all', 'HTML', 'CSS', 'JavaScript', 'BEM',],
             id: 5,
         },
@@ -66,7 +71,8 @@ const projectsData = [
             demo: 'https://anastasiyac.github.io/canvas/',
             git: 'https://github.com/AnastasiyaC/canvas',
             screenshot: canvas,
-            description: 'Canvas app is a simple paint where you can draw lines choosing line thickness and color, erase lines and change the background color.',
+            description: 'Canvas app is a simple paint where you can draw lines choosing line thickness and color, ' +
+                'erase lines and change the background color.',
             skills: ['Show all', 'HTML', 'CSS', 'JavaScript', 'Editor', 'BEM',],
             id: 6,
         },
@@ -75,7 +81,8 @@ const projectsData = [
             demo: 'https://anastasiyac.github.io/flex-panel-gallery/',
             git: 'https://github.com/AnastasiyaC/flex-panel-gallery',
             screenshot: flexPanelGallery,
-            description: 'The Flex panel gallery app consists of a series of thematic pictures "Five reasons to visit Belarus". Each picture refers to one of the reasons wich opens by clicking on it.',
+            description: 'The Flex panel gallery app consists of a series of thematic pictures "Five reasons to visit Belarus". ' +
+                'Each picture refers to one of the reasons which opens by clicking on it.',
             skills: ['Show all', 'HTML', 'CSS', 'JavaScript', 'BEM',],
             id: 7,
         },
@@ -111,7 +118,9 @@ const projectsData = [
             demo: 'https://anastasiyac.github.io/whack-a-mole/',
             git: 'https://github.com/AnastasiyaC/whack-a-mole',
             screenshot: whackAMole,
-            description: 'Whack a mole is a game where holes in the play area are filled with small moles, which pop up at random. Points are scored by clicking each mole as it appears. The faster the reaction the higher the score.',
+            description: 'Whack a mole is a game where holes in the play area are filled with small moles, ' +
+                'which pop up at random. Points are scored by clicking each mole as it appears. ' +
+                'The faster the reaction the higher the score.',
             skills: ['Show all', 'HTML', 'CSS', 'JavaScript', 'Game', 'BEM',],
             id: 11,
         },
@@ -120,25 +129,28 @@ const projectsData = [
             demo: 'https://anastasiyac.github.io/raindrops/',
             git: 'https://github.com/AnastasiyaC/raindrops',
             screenshot: raindrops,
-            description: 'Raindrops game is math simulator that allows you to consolidate the skills of arithmetic operations as addition, subtraction, multiplication and division.',
+            description: 'Raindrops game is math simulator that allows you to consolidate the skills of ' +
+                'arithmetic operations as addition, subtraction, multiplication and division.',
             skills: ['Show all', 'HTML', 'CSS', 'JavaScript', 'Game', 'BEM',],
             id: 12,
         },
         {
             name: 'weather',
-            demo: '',
-            git: '',
+            demo: 'https://weather-forecast-anastasiya-c.netlify.app/',
+            git: 'https://github.com/AnastasiyaC/Weather_App',
             screenshot: '',
-            description: '',
+            description: 'The Weather app shows current location, date and time, map with coordinates, current weather forecast and weather forecast for the next 3 days',
             skills: ['Show all', 'JavaScript', 'SASS/SCSS', 'React', 'Redux', 'BEM', 'Webpack'],
             id: 13,
         },
         {
             name: 'portfolio',
-            demo: '',
-            git: '',
+            demo: 'https://portfolio-anastasiya-c.netlify.app/',
+            git: 'https://github.com/AnastasiyaC/portfolio',
             screenshot: portfolio,
-            description: '',
+            description: 'The Portfolio app contains brief information about the developer and contact list, ' +
+                'a list of projects that can be filtered by skill or technology, links to each project demo and ' +
+                'github account and a short description of the project.',
             skills: ['Show all', 'JavaScript', 'SASS/SCSS', 'React', 'Redux', 'Router', 'BEM', 'Webpack'],
             id: 14,
         },

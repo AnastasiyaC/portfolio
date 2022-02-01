@@ -1,4 +1,5 @@
-@import '../../../styles/variables';
+@import "src/styles/variables";
+@import "src/styles/mediaMixin";
 
 @mixin text($size, $weight, $margin, $color) {
     font: {
@@ -18,12 +19,36 @@
     &-Wrapper {
         max-width: $wrapper;
         height: 100%;
+        @include _1280 {
+            max-width: 720px;
+        }
+        @include _1024 {
+            max-width: 660px;
+        }
+        @include _920 {
+            max-width: 420px;
+        }
+        @include _768 {
+            max-width: 310px;
+        }
+        @include _480 {
+            max-width: 220px;
+        }
     }
     &-Title {
         @include text(40px, 700, 70px, $mainColor);
+        @include _920 {
+            @include text(36px, 700, 40px, $mainColor);
+        }
+        @include _480 {
+            @include text(28px, 700, 20px, $mainColor);
+        }
     }
     &-Description {
         @include text(20px, 400, 30px, $fontDescriptionColor);
+        @include _768 {
+            @include text(16px, 400, 20px, $fontDescriptionColor);
+        }
     }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./header.module.scss";
-import Navigation from "../navigation/Navigation";
 import MenuBurger from "../menuBurger/MenuBurger";
+import Navigation from "../navigation/Navigation";
 
 function Header() {
     return (
@@ -11,6 +11,6 @@ function Header() {
             <Navigation/>
         </header>
     )
-}
+};
 
 export default Header;

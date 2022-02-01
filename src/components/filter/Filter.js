@@ -1,14 +1,11 @@
 import React from "react";
 import classes from "./filter.module.scss";
-import FilterButton from "./filterButton/FilterButton";
-import {  useSelector} from "react-redux";
+import FilterButtonContainer from "../../containers/filterButtonContainer/filterButtonContainer";
 
-function Filter() {
-    const buttons = useSelector((state) => state.filter.filterButtons);
-    const activeFilter = useSelector((state) => state.filter.activeFilter);
-
-    const filterButtons = buttons.map( (el) => (
-        <FilterButton
+function Filter(props) {
+    const { filters, filterDescription } = props;
+    const filterButtons = filters.map( (el) => (
+        <FilterButtonContainer
             name={ el.name }
             checked={ el.checked}
             key={ el.id }
@@ -22,10 +19,7 @@ function Filter() {
                 { filterButtons }
             </div>
             <div className={ classes['Filter-Description'] }>
-                {activeFilter.toUpperCase() === 'SHOW ALL' ?
-                'Showing all projects. Use filter to list them by skill or technology.' :
-                    `Showing projects filtered by ${activeFilter.toUpperCase()}.`
-                }
+                { filterDescription }
             </div>
         </div>
     )

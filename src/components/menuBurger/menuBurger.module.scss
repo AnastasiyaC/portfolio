@@ -1,4 +1,5 @@
-@import "../../styles/variables";
+@import "src/styles/variables";
+@import "src/styles/mediaMixin";
 
 .Menu {
     @include height-width(40px, 60px);
@@ -13,6 +14,10 @@
     top: 30px;
     right: 30px;
     z-index: 20;
+    @include _768 {
+        right: 15px;
+        top: 15px;
+    }
     &:hover {
         transform: scale(1, 1.1);
     }

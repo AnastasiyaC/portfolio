@@ -1,4 +1,5 @@
-@import "../../../styles/variables";
+@import "src/styles/variables";
+@import "src/styles/mediaMixin";
 
 @mixin line-arrows {
   height: 5px;
@@ -57,12 +58,18 @@
     text-transform: uppercase;
     color: $fontDescriptionColor;
     transition: all 0.3s linear;
+    @include _768 {
+      font-size: 9px;
+    }
   }
 }
 
 .Arrow_direction_left {
   left: 30px;
   transform: translateY(-50%) rotate(180deg);
+  @include _768 {
+    left: 10px;
+  }
   .Arrow-Text {
     transform: rotate(180deg) scale(1, 0);
   }
@@ -75,6 +82,9 @@
 
 .Arrow_direction_right {
   right: 30px;
+  @include _768 {
+    right: 10px;
+  }
   .Arrow-Text {
     transform: scale(1, 0);
   }

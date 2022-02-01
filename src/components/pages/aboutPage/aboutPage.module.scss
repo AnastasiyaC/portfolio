@@ -1,4 +1,5 @@
-@import "../../../styles/variables";
+@import "src/styles/variables";
+@import "src/styles/mediaMixin";
 
 @mixin loader-outter-inner {
     border: 6px solid #f50057;
@@ -72,21 +73,38 @@
         @include center;
         flex-direction: column;
         text-align: center;
+        @include _768 {
+            width: 340px;
+        }
+        @include _480 {
+            width: 260px;
+        }
     }
     &-Title {
         @include text(30px, 700);
         margin: 0;
         animation: 0.3s linear 2.2s forwards info;
+        @include _768 {
+            @include text(24px, 700);
+        }
     }
     &-TitleRepresentation {
         @include text(22px, 700);
         margin: 20px 0 0;
         animation: 0.3s linear 3s forwards info;
+        @include _768 {
+            @include text(18px, 700);
+            margin: 14px 0 0;
+        }
     }
     &-Description {
         @include text(18px, 400);
         margin: 10px 0 0;
         animation: 0.3s linear 3s forwards info;
+        @include _768 {
+            @include text(16px, 400);
+            margin: 10px 0 0;
+        }
     }
 }
 
