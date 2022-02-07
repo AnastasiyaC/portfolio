@@ -1,7 +1,7 @@
 const PROFILE_DATA = {
     about: {
         name: 'Anastasiya Cherniavskaya',
-        description: 'I am an frontend web developer and UI/UX javascript specialist based in Minsk, Belarus.'
+        description: 'I am an frontend web developer based in Minsk, Belarus.'
     },
     contacts: {
         mail: 'nastya.che92@gmail.com',

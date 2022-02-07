@@ -10,7 +10,7 @@ import videoSpeedController from '../assets/projectsImages/video-speed-controlle
 import virtualKeyboard from '../assets/projectsImages/virtual-keyboard.jpg';
 import whackAMole from '../assets/projectsImages/whack-a-mole.jpg';
 import raindrops from '../assets/projectsImages/raindrops.jpg';
-// import weather from '../assets/projectsImages/weather.jpg';
+import weather from '../assets/projectsImages/weather.jpg';
 import portfolio from '../assets/projectsImages/portfolio.jpg';
 
 
@@ -138,7 +138,7 @@ const projectsData = [
             name: 'weather',
             demo: 'https://weather-forecast-anastasiya-c.netlify.app/',
             git: 'https://github.com/AnastasiyaC/Weather_App',
-            screenshot: '',
+            screenshot: weather,
             description: 'The Weather app shows current location, date and time, map with coordinates, current weather forecast and weather forecast for the next 3 days',
             skills: ['Show all', 'JavaScript', 'SASS/SCSS', 'React', 'Redux', 'BEM', 'Webpack'],
             id: 13,

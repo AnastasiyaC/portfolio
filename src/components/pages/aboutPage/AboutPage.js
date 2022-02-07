@@ -30,7 +30,7 @@ function AboutPage() {
                     <p className={ classes['AboutPage-Description'] }>
                         { portfolioData.about.description }
                         <br/>
-                        Feel free to take a look at my projects on the web portfolio page.
+                        Feel free to take a look at my projects on the web portfolio page and contact me.
                     </p>
                 </div>
             <Arrow text='projects' direction='right' path='/projects'/>
